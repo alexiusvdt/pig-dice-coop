@@ -16,11 +16,20 @@ test: it will create a player object with child object for total score
 code: PlayerCreator
 output: player1 {..} totalScore{..}
 
+
 describes PlayerAddScore();
 
 test: it will take a players score upon ending their round & append to object with a unique ID
 code: PlayerAddScore();
 output: key value (id) and score
+
+describes PlayerAssignId()
+
+test: it will increment a counter that acts as an index key for the score pair
+code: PlayerAssignId()
+output: key value(id)
+
+
 
 
 two player objects, storing name & current score
