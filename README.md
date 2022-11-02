@@ -6,6 +6,17 @@ test1: it will return a random integer value between 1 and 6
 code: diceRoller();
 output: 1-6
 
+test6: it will return a round score of 0 if user rolls a 1
+code: diceroller();
+output: 0
+
+test 7: it will update & return round score of dice roll if !==1
+code: diceroller();
+output: 2
+
+<!-- test6: when a user rolls a 1, it sets their round score to 0 and prompts to pass turn
+code: diceRoller();
+output: 0 -->
 
 describes PlayerCreator();
 
@@ -27,11 +38,13 @@ test4: it will increment a counter that acts as an index key for the score pair
 code: PlayerAssignId()
 output: key value(id)
 
+
 describes newGame()
 
-test: it will create two player objects & reset 
+test: it will create a player object & reset 
 code: newGame()
-code: player1 {} & player 2{}
+code: player1 {}
+
 
 <!-- proposed/future tests -->
 <!-- test: it will create a player object with a name element
