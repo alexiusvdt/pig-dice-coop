@@ -5,6 +5,7 @@ function Player() {
   this.totalScore = 0;
   this.currentId = 0;
   this.active = 1;
+  this.name = "";
   // this.playerName = document.querySelector("form#player-name"); //update when HTML written
 }
 
@@ -70,8 +71,12 @@ function addToTotalScore() {
   player2.playerResetRoundScore();
   displayResultsP1();
   displayResultsP2();
-  if (Player.totalScore >= 100) {
-    winGame();
+  if (player1.totalScore >= 100) {
+    winner = player1
+    winGame(winner, player1.totalScore);
+  } else if (player2.totalScore >= 100) {
+    winner = player2
+    winGame(winner, player2.totalScore);
   } else {
   player1.playerChangeActive();
   }
@@ -87,6 +92,7 @@ function cheat() {
 let player1 = new Player();
 let player2 = new Player();
 
+
 //this is what sets up the board
 function newGame() {
   event.preventDefault()
@@ -101,10 +107,11 @@ function newGame() {
   displayResultsP2(0);
 }
 
-function winGame() {
-document.getElementById("winner-name").innerText = Player
-document.getElementById("winning-score").innerText = Player.totalScore
-document.querySelector("div#hidden").removeClass("-hidden")
+function winGame(winner) {
+document.getElementById("winner-name").innerText = winner
+// console.log("playerID appended", winner)
+document.getElementById("winning-score").innerText = winner.totalScore
+document.querySelector("div.-hidden").removeAttribute("class")
 }
 
 

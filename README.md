@@ -18,11 +18,11 @@ output: 2
 code: diceRoller();
 output: 0 -->
 
-describes PlayerCreator();
+Describes Player
+test: create a player object with multiple properties
+code new Player
+output player {..}, roundScore, totalScore, currentId, active, name
 
-test2: it will create a player object with child object for total score
-code: PlayerCreator
-output: player1 {..} totalScore{..}
 
 
 describes PlayerAddScore();
@@ -44,6 +44,8 @@ describes newGame()
 test(#whatever): it will reset the player object, set player 1 as active .
 code: newGame()
 output: scores = 0 and ids = 0, active =1
+
+
 
 
 <!-- describes newGame()
