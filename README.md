@@ -41,9 +41,9 @@ output: key value(id)
 
 describes newGame()
 
-test(#whatever): it will reset the player object .
+test(#whatever): it will reset the player object, set player 1 as active .
 code: newGame()
-output: scores = 0 and ids = 0
+output: scores = 0 and ids = 0, active =1
 
 
 <!-- describes newGame()

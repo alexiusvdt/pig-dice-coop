@@ -6,25 +6,39 @@
   <title>Pig Dice</title>
 </head>
 <body>
-  <h1>Pig Dice game</h1>
-  <div class="button-new-game">
-    <button type="button" class="button" id="new-game">New Game!</button>
+  <div class="gameboard">
+    <h1>Pig Dice game</h1>
+
+    <div class="results">
+      <p><strong>Player 1</strong></p>
+      <p>Current roll: <span id="current-roll"></span></p>
+      <p>Round Score: <span id="round-score"></span></p>
+      <p>Total Score: <span id="total-score"></span></p>
+      <p><strong>Player 2</strong></p>
+      <p>Current roll: <span id="current-roll2"></span></p>
+      <p>Round Score: <span id="round-score2"></span></p>
+      <p>Total Score: <span id="total-score2"></span></p>
+    </div>
+    <div class="buttons">
+      <div class="button-new-game">
+        <button type="button" class="button" id="new-game">New Game!</button>
+      </div>
+      <div class="button-roll">
+        <button type="button" class="button" id="button-roll">Are you feelin' lucky, punk?</button>
+      </div>
+      <div class="button-pass-turn">
+        <button type="button" class="button" id="button-pass">End my turn!</button>
+      </div>
+      <div id="cheater!">
+        <button type="button" class="cheat" id="button-cheat">make my score 101</button>
+      </div>
+      <div class="congratulations -hidden">
+        <h1>A winner is you!</h1>
+        <h2 id="winner-name"></h2>
+        <p>has won this game with a score of:</p>
+        <p id="winning-score"></p>
+      </div>
+    </div>
   </div>
-  <div class="button-roll">
-    <button type="button" class="button" id="button-roll">Are you feelin' lucky, punk?</button>
-  </div>
-  <div class="button-pass-turn">
-    <button type="button" class="button" id="button-pass">End my turn!</button>
-  </div>
-  <div class="results">
-    <p><strong>Player 1</strong></p>
-    <p>Current roll: <span id="current-roll"></span></p>
-    <p>Round Score: <span id="round-score"></span></p>
-    <p>Total Score: <span id="total-score"></span></p>
-    <p><strong>Player 2</strong></p>
-    <p>Current roll: <span id="current-roll2"></span></p>
-    <p>Round Score: <span id="round-score2"></span></p>
-    <p>Total Score: <span id="total-score2"></span></p>
-  <div>
 </body>
 </html>

@@ -70,7 +70,15 @@ function addToTotalScore() {
   player2.playerResetRoundScore();
   displayResultsP1();
   displayResultsP2();
+  if (Player.totalScore >= 100) {
+    winGame();
+  } else {
   player1.playerChangeActive();
+  }
+}
+
+function cheat() {
+  player1.totalScore = 101;
 }
 
 
@@ -88,7 +96,17 @@ function newGame() {
   Object.keys(player2).forEach(function(key) {
     player2[key] = 0
   });
+  player1.active = 1
+  displayResultsP1(0);
+  displayResultsP2(0);
 }
+
+function winGame() {
+document.getElementById("winner-name").innerText = Player
+document.getElementById("winning-score").innerText = Player.totalScore
+document.querySelector("div#hidden").removeClass("-hidden")
+}
+
 
 function displayResultsP1(currentRoll) {
   document.getElementById('current-roll').innerText = currentRoll;
@@ -117,4 +135,5 @@ window.addEventListener("load", function() {
   document.getElementById('new-game').addEventListener('click', newGame);
   document.getElementById('button-roll').addEventListener('click', diceRoller);
   document.getElementById('button-pass').addEventListener('click', addToTotalScore);
+  document.getElementById('button-cheat').addEventListener('click', cheat)
 });
