@@ -41,9 +41,16 @@ output: key value(id)
 
 describes newGame()
 
+test(#whatever): it will reset the player object .
+code: newGame()
+output: scores = 0 and ids = 0
+
+
+<!-- describes newGame()
+
 test: it will create a player object & reset 
 code: newGame()
-code: player1 {}
+code: player1 {} -->
 
 
 <!-- proposed/future tests -->

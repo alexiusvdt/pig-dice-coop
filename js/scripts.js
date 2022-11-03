@@ -1,7 +1,5 @@
 // business logic
 
-//this only takes 1 input. to add 2 players we'd need two specific constructors or a way to increment where it searches for
-// player name
 function Player() {
   this.roundScore = 0;
   this.totalScore = 0;
@@ -84,10 +82,12 @@ let player2 = new Player();
 //this is what sets up the board
 function newGame() {
   event.preventDefault()
-  //specify any fields that we want erased prior to new game setup
-  let player1 = new Player();
-  let roundScore = 0;
-  let lastPlayer = "player2"
+  Object.keys(player1).forEach(function(key) {
+    player1[key] = 0
+  });
+  Object.keys(player2).forEach(function(key) {
+    player2[key] = 0
+  });
 }
 
 function displayResultsP1(currentRoll) {
@@ -111,20 +111,6 @@ function displayRolled1P2(currentRoll) {
   document.getElementById('current-roll2').innerText = currentRoll;
   document.getElementById('round-score2').innerText = "You rolled 1, next player's turn!"
 } 
-
-//this selects the appropriate player
-// function passTurn() {
-//   let currentPlayer = document.getElementById('current-player').innerText;;
-//   if (currentPlayer === "1") {
-//     document.getElementById('current-player').innerText = 2;
-//   } else {
-//     document.getElementById('current-player').innerText = 1;
-//   }
-//   let player = lastPlayer
-// }
-
-
-
 
 
 window.addEventListener("load", function() {
