@@ -1,3 +1,11 @@
  .-hidden {
   display: none;
  }
+ 
+ [name=header]{
+  background-color: orangered;
+ }
+
+ [name=buttons] {
+  background-color: orangered;
+ }
