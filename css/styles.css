@@ -9,3 +9,13 @@
  [name=buttons] {
   background-color: orangered;
  }
+ 
+ [name=player1] {
+  background-color: #003cff;
+  color:antiquewhite;
+ }
+
+ [name=player2] {
+  background-color: #00ffc4;
+ }
+ 
