@@ -6,7 +6,6 @@ function Player() {
   this.currentId = 0;
   this.active = 1;
   this.name = "";
-  // this.playerName = document.querySelector("form#player-name"); //update when HTML written
 }
 
 Player.prototype.playerAddRoundScore = function(score) {
@@ -72,18 +71,18 @@ function addToTotalScore() {
   displayResultsP1();
   displayResultsP2();
   if (player1.totalScore >= 100) {
-    winner = player1
-    winGame(winner, player1.totalScore);
+    winner = player1;
+    winGame(winner);
   } else if (player2.totalScore >= 100) {
-    winner = player2
-    winGame(winner, player2.totalScore);
+    winner = player2;
+    winGame(winner);
   } else {
   player1.playerChangeActive();
   }
 }
 
 function cheat() {
-  player1.totalScore = 101;
+  player2.totalScore = 101;
 }
 
 
@@ -91,7 +90,6 @@ function cheat() {
 
 let player1 = new Player();
 let player2 = new Player();
-
 
 //this is what sets up the board
 function newGame() {
@@ -103,15 +101,20 @@ function newGame() {
     player2[key] = 0
   });
   player1.active = 1
+  player1.name = document.querySelector("#player1-name").value;
+  player2.name = document.querySelector("#player2-name").value;
+  // console.log("players should have names ", player1.name, player2.name)
   displayResultsP1(0);
   displayResultsP2(0);
+  document.getElementById('gameboard').removeAttribute("class");
+  document.getElementById('winner').setAttribute("class", "-hidden");
 }
 
 function winGame(winner) {
-document.getElementById("winner-name").innerText = winner
+document.getElementById("winner-name").innerText = winner.name
 // console.log("playerID appended", winner)
 document.getElementById("winning-score").innerText = winner.totalScore
-document.querySelector("div.-hidden").removeAttribute("class")
+document.getElementById('winner').removeAttribute("class")
 }
 
 
