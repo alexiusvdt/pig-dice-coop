@@ -16,10 +16,10 @@ A quick game of pig dice!
 
 Pig is a simple dice game which in its basic form is playable with just a single die. You win by being the first player to score 100 or more points. You may roll the die as many times as you like, but if you roll a 1, you lose all accumulated points not yet 'banked' this round and your turn is OVER!
 
-The question is: How lucky do you feel?
+The question is: How lucky do you feel? Push your luck!
 
 
-Check out the live [github pages site - not yet set up]()
+Check out the live [github pages site](https://alexiusvdt.github.io/pig-dice-coop/);
 
 ## Setup/Installation Requirements
 
@@ -36,12 +36,14 @@ Check out the live [github pages site - not yet set up]()
 
 ## Additional thanks
 
+
+
 ## Future implementations
 
 * Alternate rulesets: 
-* Hogshead (players may continue rolling on 1's, but two 1's in a row wipe the ENTIRE score, including banked amounts)
-* BossHog (players that roll two 6's in a row gain 20 points, other players lose 5)
-* PigPlus (players roll 2d6 instead of 1d6)
+  * Hogshead (players may continue rolling on 1's, but two 1's in a row wipe the ENTIRE score, including banked amounts)
+  * BossHog (players that roll two 6's in a row gain 20 points, other players lose 5)
+  * PigPlus (players roll 2d6 instead of 1d6)
 
 
 ## License
