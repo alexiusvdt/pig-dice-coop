@@ -81,9 +81,9 @@ function addToTotalScore() {
   }
 }
 
-function cheat() {
-  player2.totalScore = 101;
-}
+// function cheat() {
+//   player2.totalScore = 101;
+// }
 
 
 // UI Logic
@@ -103,6 +103,8 @@ function newGame() {
   player1.active = 1
   player1.name = document.querySelector("#player1-name").value;
   player2.name = document.querySelector("#player2-name").value;
+  document.querySelector("[name=player1-namespace]").innerText = player1.name
+  document.querySelector("[name=player2-namespace]").innerText = player2.name
   // console.log("players should have names ", player1.name, player2.name)
   displayResultsP1(0);
   displayResultsP2(0);
