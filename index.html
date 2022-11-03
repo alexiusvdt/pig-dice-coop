@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -27,7 +28,7 @@
       <div class="card col-sm-6 align-items-center" name="player1">
         <div class="card-body">
         <h1 class="card-title" name="player1-namespace">Player 1</h1>
-        <p>Current roll: <span id="current-roll"></span></p>
+        <!-- <p>Current roll: <span id="current-roll"></span></p> -->
         <p>Round Score: <span id="round-score"></span></p>
         <p>Total Score: <span id="total-score"></span></p>
         </div>
@@ -35,7 +36,7 @@
       <div class="card col-sm-6 align-items-center" name="player2">
         <div class="card-body">
         <h1 class="card-title" name="player2-namespace">Player 2</h1>
-        <p>Current roll: <span id="current-roll2"></span></p>
+        <!-- <p>Current roll: <span id="current-roll2"></span></p> -->
         <p>Round Score: <span id="round-score2"></span></p>
         <p>Total Score: <span id="total-score2"></span></p>
         </div>
@@ -43,8 +44,19 @@
     <div class="buttons-wrapper w-100 h-100">
       <div class="card align-items-center" name="buttons">
         <div class="card-body align-items-center">
+          <p>Current roll:
+            <span id="current-roll">
+                <span class="bi-dice-1-fill dice-icon" style="font-size:50px" id="dice1" name="-hidden"></span>
+                <span class="bi-dice-2 dice-icon" style="font-size:50px" id="dice2" name="-hidden"></span>
+                <span class="bi-dice-3 dice-icon" style="font-size:50px" id="dice3" name="-hidden"></span>
+                <span class="bi-dice-4 dice-icon" style="font-size:50px" id="dice4" name="-hidden"></span>
+                <span class="bi-dice-5 dice-icon" style="font-size:50px" id="dice5" name="-hidden"></span>
+                <span class="bi-dice-6 dice-icon" style="font-size:50px" id="dice6" name="-hidden"></span>
+              </p>
+            </span>
+          </p>
           <div class="button-roll">
-            <button type="button" class="button" id="button-roll">I'm feelin' lucky!</button>
+            <button type="button" class="button bi bi-dice-6" id="button-roll"> I'm feelin' lucky!</button>
           </div>
           <div class="button-pass-turn">
             <button type="button" class="button" id="button-pass">End my turn!</button>
