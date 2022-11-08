@@ -13,3 +13,7 @@ Player.prototype.playerAddRoundScore = function(score) {
 Player.prototype.playerResetRoundScore = function() {
   this.roundScore = 0;
 }
+
+Player.prototype.playerAddTotalScore = function () {
+  this.totalScore += this.roundScore;
+}
