@@ -1,25 +1,23 @@
 // business logic
 
-function Player() {
-  this.roundScore = 0;
-  this.totalScore = 0;
-  this.currentId = 0;
-  this.active = 1;
-  this.name = "";
-}
+// function Player() {
+//   this.roundScore = 0;
+//   this.totalScore = 0;
+//   this.currentId = 0;
+//   this.active = 1;
+//   this.name = "";
+// }
 
-Player.prototype.playerAddRoundScore = function(score) {
-  // score.id = this.assignId();
-  this.roundScore += score;
-}
-
-Player.prototype.playerResetRoundScore = function() {
-  this.roundScore = 0;
-}
-
-Player.prototype.playerAddTotalScore = function () {
-  this.totalScore += this.roundScore;
-}
+// Player.prototype.playerAddRoundScore = function(score) {
+//   // score.id = this.assignId();
+//   this.roundScore += score;
+// }
+// Player.prototype.playerResetRoundScore = function() {
+//   this.roundScore = 0;
+// }
+// Player.prototype.playerAddTotalScore = function () {
+//   this.totalScore += this.roundScore;
+// }
 
 Player.prototype.playerChangeActive = function() {
   if (this.active === 0) {
