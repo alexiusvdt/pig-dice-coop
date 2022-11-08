@@ -19,23 +19,23 @@
 //   this.totalScore += this.roundScore;
 // }
 
-Player.prototype.playerChangeActive = function() {
-  if (this.active === 0) {
-    this.active = 1;
-  } else {
-    this.active = 0;
-  }
-}
+// Player.prototype.playerChangeActive = function() {
+//   if (this.active === 0) {
+//     this.active = 1;
+//   } else {
+//     this.active = 0;
+//   }
+// // }
 
-Player.prototype.assignId = function() {
-  this.currentId += 1;
-  return this.currentId;
-}
+// Player.prototype.assignId = function() {
+//   this.currentId += 1;
+//   return this.currentId;
+// }
 
-function currentPlayer() {
-  let currentPlayer = document.getElementById('current-player').value;
-  return currentPlayer;
-}
+// function currentPlayer() {
+//   let currentPlayer = document.getElementById('current-player').value;
+//   return currentPlayer;
+// }
 
 function diceRoller() {
   resetDice();
