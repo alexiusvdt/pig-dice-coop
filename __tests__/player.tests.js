@@ -1,5 +1,3 @@
-// import test, { beforeEach } from 'node:test';
-import test from 'node:test';
 import Player from './../src/player.js';
 
 describe('Player', () => {
