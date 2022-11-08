@@ -1,5 +1,4 @@
 // import test, { beforeEach } from 'node:test';
-import test from 'node:test';
 import Player from './../src/player.js';
 
 describe('Player', () => {
@@ -33,5 +32,7 @@ describe('Player', () => {
   test("shall change the Player.active property to 1 or 0 ", () => {
     myPlayer.playerChangeActive()
     expect(myPlayer.active).toEqual(0);
+    myPlayer.playerChangeActive();
+    expect(myPlayer.active).toEqual(1);
   });
 });

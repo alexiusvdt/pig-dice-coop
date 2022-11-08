@@ -17,3 +17,11 @@ Player.prototype.playerResetRoundScore = function() {
 Player.prototype.playerAddTotalScore = function () {
   this.totalScore += this.roundScore;
 }
+
+Player.prototype.playerChangeActive = function() {
+  if (this.active === 0) {
+    this.active = 1;
+  } else {
+    this.active = 0;
+  }
+}
