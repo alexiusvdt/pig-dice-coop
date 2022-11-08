@@ -1,4 +1,5 @@
 // import test, { beforeEach } from 'node:test';
+import test from 'node:test';
 import Player from './../src/player.js';
 
 describe('Player', () => {
@@ -22,4 +23,11 @@ describe('Player', () => {
     myPlayer.playerResetRoundScore()
     expect(myPlayer.roundScore).toEqual(0)
   });
+
+  test("shall add the players round score to the total score"), () => {
+    myPlayer.roundScore = 10
+    myPlayer.playerAddTotalScore()
+    expect(myPlayer.totalScore).toEqual(10);
+  }
+
 });
