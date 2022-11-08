@@ -1,52 +1,8 @@
-// business logic
-
-// function Player() {
-//   this.roundScore = 0;
-//   this.totalScore = 0;
-//   this.currentId = 0;
-//   this.active = 1;
-//   this.name = "";
-// }
-
-// Player.prototype.playerAddRoundScore = function(score) {
-//   // score.id = this.assignId();
-//   this.roundScore += score;
-// }
-// Player.prototype.playerResetRoundScore = function() {
-//   this.roundScore = 0;
-// }
-// Player.prototype.playerAddTotalScore = function () {
-//   this.totalScore += this.roundScore;
-// }
-
-// Player.prototype.playerChangeActive = function() {
-//   if (this.active === 0) {
-//     this.active = 1;
-//   } else {
-//     this.active = 0;
-//   }
-// // }
-
-// Player.prototype.assignId = function() {
-//   this.currentId += 1;
-//   return this.currentId;
-// }
-
-// function currentPlayer() {
-//   let currentPlayer = document.getElementById('current-player').value;
-//   return currentPlayer;
-// }
-
-function diceRoller() {
-  resetDice();
-  let rollResult = Math.floor(Math.random() * 6)+1;
-  evaluateDiceRoll(rollResult);
-}
-
-
-
-
-// UI Logic
+import dice from '/.dice.js';
+import Player from '/.player.js';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
 
 // function cheat() {
 //   player2.totalScore = 101;
